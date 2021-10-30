@@ -42,9 +42,6 @@ db = SQL("sqlite:///finance.db")
 #if not os.environ.get("API_KEY"):
     #raise RuntimeError("API_KEY not set")
 
-# export API_KEY=pk_d44d44758a3149ef96e5e6c03098a089
-
-
 def get_portifolio():
     portifolio = db.execute("SELECT * FROM portifolio WHERE user_id = :user_id and shares <> 0", user_id=session["user_id"])
     for stock in portifolio:
