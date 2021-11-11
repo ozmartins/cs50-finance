@@ -1,1 +1,1 @@
-web gunicorn application:app
+osm gunicorn application:app
